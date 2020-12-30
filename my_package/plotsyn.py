@@ -9,4 +9,3 @@ def execute():
     x_axis = np.linspace(0, 20, 100)
     plt.plot(x_axis, np.sin(x_axis))  # Plot the sine of each x point
     plt.show()
-    return

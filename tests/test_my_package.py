@@ -11,3 +11,8 @@ def test_increment():
 def test_decrement():
     """ test decrement """
     assert my_package.decrement(3) == 2
+
+
+def test_double():
+    """ test double """
+    assert my_package.double(3) == 3
