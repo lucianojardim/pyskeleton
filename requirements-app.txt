@@ -1,0 +1,4 @@
+# plot graphs
+matplotlib
+# notebooks
+jupyter

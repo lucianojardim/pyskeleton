@@ -1,0 +1,12 @@
+# formatter -> pep8 and pycodestyle are the same package (renamed)
+pep8
+pycodestyle
+autopep8
+# linter
+pylint
+# publish packages
+wheel
+twine
+# test framework
+pytest
+pytest-xdist
