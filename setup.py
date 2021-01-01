@@ -1,3 +1,4 @@
+""" setup for my_package """
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -11,8 +12,11 @@ setuptools.setup(
     description="Test publish python packages",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://test.pypi.org/project/my-package-lucianoj",
-    packages=setuptools.find_packages(),
+    url="https://github/lucianojardim/pyskeleton",
+    packages=["my_package"],
+    install_requires=[
+        "matplotlib"
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

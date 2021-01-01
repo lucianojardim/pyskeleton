@@ -12,6 +12,7 @@ cleanup: cleanup-build cleanup-develop
 setup:
 	python -m pip install --upgrade pip setuptools
 	python -m pip install -r requirements.txt
+	python -m pip freeze > requirements-freeze.txt
 
 build: cleanup-build
 	python setup.py sdist bdist_wheel
@@ -35,3 +36,5 @@ installtest:
 installprod:
 	python -m pip uninstall -y my-package-lucianoj
 	python -m pip install my-package-lucianoj
+
+.PHONY: init setup cleanup build

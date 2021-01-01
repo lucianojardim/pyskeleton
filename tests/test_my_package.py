@@ -15,4 +15,4 @@ def test_decrement():
 
 def test_double():
     """ test double """
-    assert my_package.double(3) == 3
+    assert my_package.double(3) == 6

@@ -17,6 +17,7 @@ Run ". ./setup.sh" -> select python intepreter installed locally
 - python -m pip install --upgrade twine
 - python -m twine upload --repository testpypi dist/* # Uploading distributions to <https://test.pypi.org/legacy/>
 - python -m pip install --index-url <https://test.pypi.org/simple/> --no-deps my-package-lucianoj
+- python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple my-package-lucianoj # to get dependencies from prod pypi
 - to test the package that was installed: run intepreter: python, then import my_package, and then my_package.execute()
 - python -m pip uninstall my-package-lucianoj
 - Use vscode to enable test framework pytest: > python configure tests (it also installs the pytest module)
