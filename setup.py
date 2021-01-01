@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="my-package-lucianoj",
-    version="0.0.8",
+    version="0.0.9",
     author="lucianoj",
     author_email="author@example.com",
     description="Test publish python packages",
