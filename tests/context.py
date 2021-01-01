@@ -13,4 +13,4 @@ THIS_FILE_PARENT_PATH = os.path.join(THIS_FILE_OS_PATH, PACKAGE_PARENT)
 sys.path.append(os.path.normpath(THIS_FILE_PARENT_PATH))
 
 # pylint: disable=wrong-import-position,unused-import
-import my_package
+import my_package  # isort:skip # noqa

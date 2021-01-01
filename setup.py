@@ -14,6 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github/lucianojardim/pyskeleton",
     packages=["my_package"],
+    scripts=["bin/my_package"],
     install_requires=[
         "matplotlib"
     ],

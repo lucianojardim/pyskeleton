@@ -1,4 +1,9 @@
-init: installdev
+default: installdev
+
+#
+# Cleanup
+#
+cleanup: cleanup-build cleanup-develop
 
 cleanup-build:
 	rm -fr build/
@@ -7,13 +12,23 @@ cleanup-build:
 cleanup-develop:
 	find . -name '*.egg-info' -exec rm -fr {} +
 
-cleanup: cleanup-build cleanup-develop
+#
+# Install and Freeze requirements
+#
+setup: install-basics install-reqs freeze
 
-setup:
+install-basics:
 	python -m pip install --upgrade pip setuptools
-	python -m pip install -r requirements.txt
-	python -m pip freeze > requirements-freeze.txt
 
+install-reqs:
+	python -m pip install -r requirements.txt
+
+freeze:
+	python -m pip freeze --all > requirements-freeze.txt
+
+#
+# Build and Publish
+#
 build: cleanup-build
 	python setup.py sdist bdist_wheel
 	ls -l dist
@@ -24,6 +39,9 @@ uploadtest: build
 uploadprod: build
 	python -m twine upload dist/*
 
+#
+# Install
+#
 installdev: cleanup
 	python -m pip uninstall -y my-package-lucianoj
 	python -m pip install -e .
@@ -37,4 +55,7 @@ installprod:
 	python -m pip uninstall -y my-package-lucianoj
 	python -m pip install my-package-lucianoj
 
-.PHONY: init setup cleanup build
+#
+# Others
+#
+.PHONY: init setup cleanup build freeze default
