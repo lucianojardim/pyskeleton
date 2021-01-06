@@ -24,6 +24,8 @@ Run ". ./setup.sh" -> select python intepreter installed locally
 - python -m pip install pytest-xdist # execute tests in parallel, remember to create associated pytest.ini
 - python -m pip install jupyter # support for notebooks
 - python -m pip install -e /Users/jardiml/development/python/temp # publish local packages using setup.py
+- dir() and help() to get metadata about the interpreter
+
 
 ## To execute the package (option #1: as a module)
 
